@@ -1,0 +1,130 @@
+@import 'utils.sass'
+@import 'animations.sass'
+
+.btn
+  background-color: transparent
+  position: relative
+  height: 3.25rem
+  cursor: pointer
+  font-family: 'Poppins', 'Roboto'
+  font-size: 0.875rem
+  box-sizing: border-box
+  outline: 2px solid var(--neutral-inverse)
+  padding-inline: 1.5rem
+  border-radius: 0.5rem
+  overflow: hidden
+  color: var(--text-neutral)
+  display: flex
+  align-items: center
+  justify-content: center 
+  max-width: fit-content
+  transition: all ease 0.2s
+
+  & span
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 200%
+    height: 100%
+    background-color: var(--neutral-inverse)
+    @include btn-transition-in
+
+
+  &:hover
+    color: var(--text-neutral-content)
+
+    &::before
+      @include btn-transition-out
+   
+  &-icon
+    display: flex
+    border-radius: 999px
+    height: 3rem
+    width: 3rem
+    padding: 0.5rem 0.75rem
+    outline: none
+    color: var(--text-neutral-content)
+
+    &-accent
+      background-color: var(--accent-light)
+      color: var(--accent-dark)
+  
+        
+    &-secondary
+      background-color: var(--secondary-light)
+      color: var(--secondary-dark)
+  
+
+ 
+  &:active
+    transform: scale(0.95)
+    
+
+a.btn
+  color: var(--text-neutral-content)
+  
+  &::before
+    display: none
+
+  &::after
+    content: attr(data-text)
+
+.layout-container 
+  flex-grow: 1
+
+  .header-container
+    height: 6rem
+    padding-inline: 4rem
+
+    .logo
+      font-size: 1.5rem
+      font-weight: 600
+      color: var(--text-neutral-content)
+      text-decoration: none
+
+.page.home-container
+  width: 100%
+  height: 100%
+  flex-direction: row
+  background-image: url('../../public/woman-for-banner.jpg')
+  background-size: contain
+  background-position: left
+
+  & > *
+    flex: 1
+    display: block
+    width: 100%
+    height: 100%
+
+#modal
+  display: none
+
+  &.open
+    z-index: 999
+    display: block
+    position: fixed
+    top: 0 
+    height: 100vh
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #00000080
+
+    .modal
+      @include modal-open
+      border-radius: 1rem
+      background-color: var(--neutral)
+      padding: 2rem
+  &.close
+
+    .modal
+      background-color: green
+      @include modal-close

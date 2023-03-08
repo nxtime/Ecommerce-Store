@@ -1,0 +1,52 @@
+@mixin neutral
+  background-color: var(--neutral)
+  color: var(--text-neutral-content)
+
+@mixin neutral-inverse
+  background-color: var(--neutral-inverse)
+  color: var(--text-neutral)
+
+$gap-sizes: 2, 4, 6, 8
+
+// Generate classes for different gap sizes
+@for $i from 1 through length($gap-sizes) 
+  $size: nth($gap-sizes, $i)
+
+  .gap-#{$size} 
+    gap: #{calc($size / 2)}rem
+
+
+$font-sizes: ('xs': 0.75rem, 'sm': 0.875rem, 'base': 1rem, 'lg': 1.125rem, 'xl': 1.25rem, '2xl': 1.5rem,'3xl': 1.875rem,'4xl': 2.25rem, '5xl': 3rem, '6xl': 4rem)
+// Generate classes for different font sizes
+@each $name, $size in $font-sizes
+  .text-#{$name}
+    font-size: $size
+
+$font-weight: ('thin': 100, 'extralight': 200, 'light': 300, 'normal': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900)
+// Generate classes for different font weights
+@each $name, $weight in $font-weight
+  .font-#{$name}
+    font-weight: $weight
+
+
+$colors: ('accent', 'accent-hover', 'accent-neutral', 'neutral', 'neutral-hover', 'neutral-inverse', 'text-highlight', 'text-neutral', 'text-neutral-content')
+
+// Generate classes for different colors
+@each $color in $colors
+  .bg-#{$color}
+    background-color: var(--#{$color})
+
+  .text-#{$color}
+    color: var(--#{$color})
+
+$widths: ('w-0': 0, 'w-2': 1, )
+
+@for $i from 6 through 96
+  $key: 'w-#{$i}'
+  $value: calc(($i - 4) / 2)
+
+  $widths: map-merge($widths, ($key: $value * 1rem))
+
+  .#{$key}
+    width: $value * 1rem
+  

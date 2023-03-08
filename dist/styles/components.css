@@ -1,0 +1,700 @@
+.gap-2 {
+  gap: 1rem;
+}
+
+.gap-4 {
+  gap: 2rem;
+}
+
+.gap-6 {
+  gap: 3rem;
+}
+
+.gap-8 {
+  gap: 4rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+}
+
+.text-6xl {
+  font-size: 4rem;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-accent-hover {
+  background-color: var(--accent-hover);
+}
+
+.text-accent-hover {
+  color: var(--accent-hover);
+}
+
+.bg-accent-neutral {
+  background-color: var(--accent-neutral);
+}
+
+.text-accent-neutral {
+  color: var(--accent-neutral);
+}
+
+.bg-neutral {
+  background-color: var(--neutral);
+}
+
+.text-neutral {
+  color: var(--neutral);
+}
+
+.bg-neutral-hover {
+  background-color: var(--neutral-hover);
+}
+
+.text-neutral-hover {
+  color: var(--neutral-hover);
+}
+
+.bg-neutral-inverse {
+  background-color: var(--neutral-inverse);
+}
+
+.text-neutral-inverse {
+  color: var(--neutral-inverse);
+}
+
+.bg-text-highlight {
+  background-color: var(--text-highlight);
+}
+
+.text-text-highlight {
+  color: var(--text-highlight);
+}
+
+.bg-text-neutral {
+  background-color: var(--text-neutral);
+}
+
+.text-text-neutral {
+  color: var(--text-neutral);
+}
+
+.bg-text-neutral-content {
+  background-color: var(--text-neutral-content);
+}
+
+.text-text-neutral-content {
+  color: var(--text-neutral-content);
+}
+
+.w-6 {
+  width: 1rem;
+}
+
+.w-7 {
+  width: 1.5rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-9 {
+  width: 2.5rem;
+}
+
+.w-10 {
+  width: 3rem;
+}
+
+.w-11 {
+  width: 3.5rem;
+}
+
+.w-12 {
+  width: 4rem;
+}
+
+.w-13 {
+  width: 4.5rem;
+}
+
+.w-14 {
+  width: 5rem;
+}
+
+.w-15 {
+  width: 5.5rem;
+}
+
+.w-16 {
+  width: 6rem;
+}
+
+.w-17 {
+  width: 6.5rem;
+}
+
+.w-18 {
+  width: 7rem;
+}
+
+.w-19 {
+  width: 7.5rem;
+}
+
+.w-20 {
+  width: 8rem;
+}
+
+.w-21 {
+  width: 8.5rem;
+}
+
+.w-22 {
+  width: 9rem;
+}
+
+.w-23 {
+  width: 9.5rem;
+}
+
+.w-24 {
+  width: 10rem;
+}
+
+.w-25 {
+  width: 10.5rem;
+}
+
+.w-26 {
+  width: 11rem;
+}
+
+.w-27 {
+  width: 11.5rem;
+}
+
+.w-28 {
+  width: 12rem;
+}
+
+.w-29 {
+  width: 12.5rem;
+}
+
+.w-30 {
+  width: 13rem;
+}
+
+.w-31 {
+  width: 13.5rem;
+}
+
+.w-32 {
+  width: 14rem;
+}
+
+.w-33 {
+  width: 14.5rem;
+}
+
+.w-34 {
+  width: 15rem;
+}
+
+.w-35 {
+  width: 15.5rem;
+}
+
+.w-36 {
+  width: 16rem;
+}
+
+.w-37 {
+  width: 16.5rem;
+}
+
+.w-38 {
+  width: 17rem;
+}
+
+.w-39 {
+  width: 17.5rem;
+}
+
+.w-40 {
+  width: 18rem;
+}
+
+.w-41 {
+  width: 18.5rem;
+}
+
+.w-42 {
+  width: 19rem;
+}
+
+.w-43 {
+  width: 19.5rem;
+}
+
+.w-44 {
+  width: 20rem;
+}
+
+.w-45 {
+  width: 20.5rem;
+}
+
+.w-46 {
+  width: 21rem;
+}
+
+.w-47 {
+  width: 21.5rem;
+}
+
+.w-48 {
+  width: 22rem;
+}
+
+.w-49 {
+  width: 22.5rem;
+}
+
+.w-50 {
+  width: 23rem;
+}
+
+.w-51 {
+  width: 23.5rem;
+}
+
+.w-52 {
+  width: 24rem;
+}
+
+.w-53 {
+  width: 24.5rem;
+}
+
+.w-54 {
+  width: 25rem;
+}
+
+.w-55 {
+  width: 25.5rem;
+}
+
+.w-56 {
+  width: 26rem;
+}
+
+.w-57 {
+  width: 26.5rem;
+}
+
+.w-58 {
+  width: 27rem;
+}
+
+.w-59 {
+  width: 27.5rem;
+}
+
+.w-60 {
+  width: 28rem;
+}
+
+.w-61 {
+  width: 28.5rem;
+}
+
+.w-62 {
+  width: 29rem;
+}
+
+.w-63 {
+  width: 29.5rem;
+}
+
+.w-64 {
+  width: 30rem;
+}
+
+.w-65 {
+  width: 30.5rem;
+}
+
+.w-66 {
+  width: 31rem;
+}
+
+.w-67 {
+  width: 31.5rem;
+}
+
+.w-68 {
+  width: 32rem;
+}
+
+.w-69 {
+  width: 32.5rem;
+}
+
+.w-70 {
+  width: 33rem;
+}
+
+.w-71 {
+  width: 33.5rem;
+}
+
+.w-72 {
+  width: 34rem;
+}
+
+.w-73 {
+  width: 34.5rem;
+}
+
+.w-74 {
+  width: 35rem;
+}
+
+.w-75 {
+  width: 35.5rem;
+}
+
+.w-76 {
+  width: 36rem;
+}
+
+.w-77 {
+  width: 36.5rem;
+}
+
+.w-78 {
+  width: 37rem;
+}
+
+.w-79 {
+  width: 37.5rem;
+}
+
+.w-80 {
+  width: 38rem;
+}
+
+.w-81 {
+  width: 38.5rem;
+}
+
+.w-82 {
+  width: 39rem;
+}
+
+.w-83 {
+  width: 39.5rem;
+}
+
+.w-84 {
+  width: 40rem;
+}
+
+.w-85 {
+  width: 40.5rem;
+}
+
+.w-86 {
+  width: 41rem;
+}
+
+.w-87 {
+  width: 41.5rem;
+}
+
+.w-88 {
+  width: 42rem;
+}
+
+.w-89 {
+  width: 42.5rem;
+}
+
+.w-90 {
+  width: 43rem;
+}
+
+.w-91 {
+  width: 43.5rem;
+}
+
+.w-92 {
+  width: 44rem;
+}
+
+.w-93 {
+  width: 44.5rem;
+}
+
+.w-94 {
+  width: 45rem;
+}
+
+.w-95 {
+  width: 45.5rem;
+}
+
+.w-96 {
+  width: 46rem;
+}
+
+@keyframes slide-diagonal-out {
+  0% {
+    transform: translateX(-10%) skewX(-30deg);
+  }
+  25% {
+    transform: translateX(12.5%) skewX(-30deg);
+  }
+  75% {
+    transform: translateX(87.5%) skewX(-30deg);
+  }
+  100% {
+    transform: translateX(100%) skewX(-30deg);
+  }
+}
+@keyframes slide-diagonal-in {
+  0% {
+    transform: translateX(-110%) skewX(-30deg);
+  }
+  25% {
+    transform: translateX(-87.5%) skewX(-30deg);
+  }
+  75% {
+    transform: translateX(-12.5%) skewX(-30deg);
+  }
+  100% {
+    transform: translateX(-10%) skewX(-30deg);
+  }
+}
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+.btn {
+  background-color: transparent;
+  position: relative;
+  height: 3.25rem;
+  cursor: pointer;
+  font-family: "Poppins", "Roboto";
+  font-size: 0.875rem;
+  box-sizing: border-box;
+  outline: 2px solid var(--neutral-inverse);
+  padding-inline: 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  color: var(--text-neutral);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+  transition: all ease 0.2s;
+}
+.btn span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-color: var(--neutral-inverse);
+  animation: slide-diagonal-in 0.5s ease-in-out forwards;
+}
+.btn:hover {
+  color: var(--text-neutral-content);
+}
+.btn:hover::before {
+  animation: slide-diagonal-out 0.5s ease-in-out forwards;
+}
+.btn-icon {
+  display: flex;
+  border-radius: 999px;
+  height: 3rem;
+  width: 3rem;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  color: var(--text-neutral-content);
+}
+.btn-icon-accent {
+  background-color: var(--accent-light);
+  color: var(--accent-dark);
+}
+.btn-icon-secondary {
+  background-color: var(--secondary-light);
+  color: var(--secondary-dark);
+}
+.btn:active {
+  transform: scale(0.95);
+}
+
+a.btn {
+  color: var(--text-neutral-content);
+}
+a.btn::before {
+  display: none;
+}
+a.btn::after {
+  content: attr(data-text);
+}
+
+.layout-container {
+  flex-grow: 1;
+}
+.layout-container .header-container {
+  height: 6rem;
+  padding-inline: 4rem;
+}
+.layout-container .header-container .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-neutral-content);
+  text-decoration: none;
+}
+
+.page.home-container {
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  background-image: url("../../public/woman-for-banner.jpg");
+  background-size: contain;
+  background-position: left;
+}
+.page.home-container > * {
+  flex: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#modal {
+  display: none;
+}
+#modal.open {
+  z-index: 999;
+  display: block;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+}
+#modal.open .modal {
+  animation: slide-down 0.3s ease-in-out forwards;
+  border-radius: 1rem;
+  background-color: var(--neutral);
+  padding: 2rem;
+}
+#modal.close .modal {
+  background-color: green;
+  animation: slide-up 0.3s ease-in-out forwards;
+}
+
+/*# sourceMappingURL=components.css.map */

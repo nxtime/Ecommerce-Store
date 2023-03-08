@@ -1,0 +1,47 @@
+@mixin spring
+  transition: all 0.4s ease-in-out
+
+@mixin btn-transition-in
+  animation: slide-diagonal-in 0.5s ease-in-out forwards
+
+@mixin btn-transition-out
+  animation: slide-diagonal-out 0.5s ease-in-out forwards
+
+@mixin modal-open
+  animation: slide-down 0.3s ease-in-out forwards
+
+@mixin modal-close
+  animation: slide-up 0.3s ease-in-out forwards
+
+@keyframes slide-diagonal-out
+  0%
+    transform: translateX(-10%) skewX(-30deg)
+  25%
+    transform: translateX(12.5%)  skewX(-30deg)
+  75%
+    transform: translateX(87.5%) skewX(-30deg)
+  100%
+    transform: translateX(100%) skewX(-30deg)
+
+@keyframes slide-diagonal-in
+  0%
+    transform: translateX(-110%) skewX(-30deg)
+  25%
+    transform: translateX(-87.5%)  skewX(-30deg)
+  75%
+    transform: translateX(-12.5%) skewX(-30deg)
+  100%
+    transform: translateX(-10%) skewX(-30deg)
+
+@keyframes slide-down
+  0%
+    transform: translateY(-100vh)
+  100%
+    transform: translateY(0)
+
+
+@keyframes slide-up
+  0%
+    transform: translateY(0vh)
+  100%
+    transform: translateY(-100vh)

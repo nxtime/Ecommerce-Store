@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@800&family=Poppins&family=Roboto&family=Ubuntu&display=swap");
+@import url("components.css");
+@keyframes slide-diagonal-out {
+  0% {
+    transform: translateX(-10%) skewX(-30deg);
+  }
+  25% {
+    transform: translateX(12.5%) skewX(-30deg);
+  }
+  75% {
+    transform: translateX(87.5%) skewX(-30deg);
+  }
+  100% {
+    transform: translateX(100%) skewX(-30deg);
+  }
+}
+@keyframes slide-diagonal-in {
+  0% {
+    transform: translateX(-110%) skewX(-30deg);
+  }
+  25% {
+    transform: translateX(-87.5%) skewX(-30deg);
+  }
+  75% {
+    transform: translateX(-12.5%) skewX(-30deg);
+  }
+  100% {
+    transform: translateX(-10%) skewX(-30deg);
+  }
+}
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+:root {
+  --accent: rgb(253, 167, 105);
+  --accent-light: rgb(238, 216, 200);
+  --accent-dark: rgb(107, 54, 16);
+  --accent-hover: rgb(240, 153, 125);
+  --accent-active: rgb(250, 171, 120:);
+  --accent-neutral: rgb(255, 235, 180);
+  --secondary: rgb(68, 60, 104);
+  --secondary-light: rgb(156, 146, 189);
+  --secondary-hover: rgb(57, 48, 83);
+  --secondary-dark: rgb(24, 18, 43);
+  --neutral: rgb(247, 241, 229);
+  --neutral-hover: rgb(245, 234, 234);
+  --neutral-inverse: rgb(44, 51, 51);
+  --text-highlight: rgb(78, 56, 64);
+  --text-neutral: rgb(247, 241, 229);
+  --text-neutral-content: rgb(44, 51, 51);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+  color: var(--text);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.4s ease-in-out;
+}
+a:hover {
+  font-weight: medium;
+  color: var(--text-highlight);
+}
+
+body {
+  font-family: "Poppins", "Roboto", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: var(--neutral);
+  oveflow-x: hidden;
+}
+
+.badge {
+  background-color: var(--accent-light);
+  color: var(--accent-dark);
+  padding: 0.25rem 0.5rem;
+  height: 2rem;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+input,
+button,
+textarea {
+  outline: none;
+  border: none;
+}
+input:focus-visible,
+button:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+h-full {
+  height: 100%;
+}
+
+h-screen {
+  height: 100vh;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*# sourceMappingURL=global.css.map */
