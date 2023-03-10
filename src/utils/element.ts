@@ -1,13 +1,14 @@
 import { useState } from "../hooks/useState.js";
 
 export interface IElementConstructor {
-  element: string;
+  as: string;
   content?: any;
-  attributes?: any;
+  attr?: any;
   events?: {
     type: keyof HTMLElementEventMap;
     listener: EventListenerOrEventListenerObject;
   }[];
+  children?: Element[];
 }
 
 export class Element {
@@ -16,18 +17,19 @@ export class Element {
   state: any;
 
   constructor({
-    element,
+    as,
     content,
-    attributes,
-    events
+    attr,
+    events,
+    children,
   }: IElementConstructor) {
-    const el = document.createElement(element);
+    const el = document.createElement(as);
 
     this.content = content;
 
-    if (attributes) {
-      for (const key in attributes) {
-        el.setAttribute(key, attributes[key]);
+    if (attr) {
+      for (const key in attr) {
+        el.setAttribute(key, attr[key]);
       }
     }
 
@@ -36,6 +38,12 @@ export class Element {
         el.addEventListener(event.type, event.listener);
       });
     }
+
+    if (children) {
+      children.forEach((child) => {
+        el.appendChild(child.element);
+      });
+    };
 
     this.element = el;
 
@@ -52,9 +60,7 @@ export class Element {
   }
 
   render() {
-
     if (!this.content && !this.state) return;
-
     this.element.innerHTML = this.state ?? this.content;
     //    return this.state ?? this.content;
   }

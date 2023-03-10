@@ -1,0 +1,124 @@
+#page-products {
+  flex-grow: 1;
+  height: 100%;
+}
+#page-products > div {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.products-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  flex-wrap: wrap;
+}
+.products-container .product-image {
+  display: block;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.products-container .product-image img {
+  display: flex;
+  align-items: center;
+  max-height: 100%;
+  object-fit: contain;
+  transition: all ease 0.2s;
+}
+.products-container .product-image img:hover {
+  transform: scale(1.2);
+  filter: brightness(0.5);
+}
+.products-container .product-rating {
+  position: relative;
+  font-size: 0.75rem;
+  display: flex;
+  color: var(--text-neutral-content);
+}
+.products-container .product-rating::after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  width: 1rem;
+  height: 80%;
+  top: 0.1rem;
+  background-image: url("https://www.pngfind.com/pngs/m/657-6575006_star-with-rounded-edges-png-star-rounded-corners.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+}
+.products-container .product-description {
+  position: relative;
+  margin-left: 0.825rem;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 200;
+  color: #888;
+  padding-block: 0.5rem;
+}
+.products-container .product-description::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  right: 100%;
+  background-size: contain;
+  background-image: url("https://static.thenounproject.com/png/3400733-200.png");
+}
+.products-container .product-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+.products-container .product-categories {
+  align-self: flex-start;
+}
+.products-container .product-categories--item {
+  height: fit-content;
+  transition: all ease 0.2s;
+}
+.products-container .product-categories--item:hover {
+  background-color: var(--accent);
+  color: white;
+}
+.products-container .product.out-of-stock {
+  position: relative;
+  opacity: 0.75;
+  user-select: none;
+  pointer-events: none;
+}
+.products-container .product.out-of-stock::after {
+  content: "Out of stock";
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  background-color: #ddaa88;
+  color: white;
+  font-size: 0.85rem;
+  display: flex;
+  user-select: none;
+}
+.products-container .product.out-of-stock * {
+  user-select: none;
+}
+.products-container .product-button {
+  width: 100%;
+  padding-inline: 0;
+  max-width: 100%;
+}
+
+.cart-product-quantity {
+  padding: 1rem;
+  background-color: var(--neutral);
+  border-radius: 0.5rem;
+  border: 1px solid var(--accent-dark);
+}
+.cart-product-quantity:focus {
+  outline: none;
+  border: 1px solid var(--accent);
+}
+
+/*# sourceMappingURL=products.css.map */

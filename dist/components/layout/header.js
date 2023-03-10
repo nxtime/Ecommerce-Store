@@ -10,6 +10,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 import { actionMenu, navlinks } from "../../data/header.js";
 import { Container } from "../../utils/container.js";
 import { Link } from "../../utils/link.js";
+import { Cart } from "../organism/cart/index.js";
 import { Notification } from "../organism/notification.js";
 var Header = /** @class */ (function () {
     function Header() {
@@ -62,7 +63,8 @@ var Header = /** @class */ (function () {
                     to: link.path
                 });
             }), true), [
-                new Notification()
+                new Cart(),
+                new Notification(),
             ], false)
         });
         Header.container = new Container({

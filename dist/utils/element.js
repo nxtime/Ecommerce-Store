@@ -1,12 +1,12 @@
 import { useState } from "../hooks/useState.js";
 var Element = /** @class */ (function () {
     function Element(_a) {
-        var element = _a.element, content = _a.content, attributes = _a.attributes, events = _a.events;
-        var el = document.createElement(element);
+        var as = _a.as, content = _a.content, attr = _a.attr, events = _a.events, children = _a.children;
+        var el = document.createElement(as);
         this.content = content;
-        if (attributes) {
-            for (var key in attributes) {
-                el.setAttribute(key, attributes[key]);
+        if (attr) {
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
             }
         }
         if (events) {
@@ -14,6 +14,12 @@ var Element = /** @class */ (function () {
                 el.addEventListener(event.type, event.listener);
             });
         }
+        if (children) {
+            children.forEach(function (child) {
+                el.appendChild(child.element);
+            });
+        }
+        ;
         this.element = el;
         this.render();
     }

@@ -5,4 +5,5 @@ export type IPaths = "/" |
   "/contact" |
   "/promotion" |
   "/cart" |
-  "/notifications"; 
+  "/notifications" |
+  "`/products/${number}`";

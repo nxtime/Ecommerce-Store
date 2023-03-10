@@ -1,4 +1,3 @@
-import { Button } from "../utils/buttonElement.js";
 import { Container } from "../utils/container.js";
 import { Element } from "../utils/element.js";
 import { Link } from "../utils/link.js";
@@ -8,7 +7,7 @@ export class Home {
     counter: 0
   };
 
-  static render() {
+  static render(filter: any) {
     const container = new Container({
       variant: {
         type: "flex",
@@ -17,7 +16,7 @@ export class Home {
       },
       className: " home-container",
       children: [
-        new Element({ element: 'span' }),
+        new Element({ as: 'span' }),
         new Container({
           variant: {
             type: "flex",
@@ -28,9 +27,9 @@ export class Home {
           },
           children: [
             new Element({
-              element: 'h1',
+              as: 'h1',
               content: 'Fashion up your look',
-              attributes: {
+              attr: {
                 class: 'text-6xl text-neutral',
               },
             }),

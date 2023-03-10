@@ -4,7 +4,7 @@ import { Link } from "../utils/link.js";
 var Home = /** @class */ (function () {
     function Home() {
     }
-    Home.render = function () {
+    Home.render = function (filter) {
         var container = new Container({
             variant: {
                 type: "flex",
@@ -13,7 +13,7 @@ var Home = /** @class */ (function () {
             },
             className: " home-container",
             children: [
-                new Element({ element: 'span' }),
+                new Element({ as: 'span' }),
                 new Container({
                     variant: {
                         type: "flex",
@@ -23,9 +23,9 @@ var Home = /** @class */ (function () {
                     },
                     children: [
                         new Element({
-                            element: 'h1',
+                            as: 'h1',
                             content: 'Fashion up your look',
-                            attributes: {
+                            attr: {
                                 "class": 'text-6xl text-neutral'
                             }
                         }),

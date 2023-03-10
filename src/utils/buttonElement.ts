@@ -2,7 +2,7 @@ import { Element } from './element.js';
 
 export interface IButtonConstructor {
   text: string;
-  onClick?: () => void;
+  onClick?: (event: Event) => void;
   className?: string;
   type?: string;
 }
@@ -17,9 +17,9 @@ export class Button extends Element {
     }: IButtonConstructor
   ) {
     super({
-      element: 'button',
+      as: 'button',
       content: `<span>${text}</span>`,
-      attributes: { type, class: 'btn ' + className },
+      attr: { type, class: 'btn ' + className },
       events: [{ type: 'click', listener: onClick }]
     });
   }

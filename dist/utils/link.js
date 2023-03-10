@@ -18,11 +18,12 @@ import { Element } from './element.js';
 var Link = /** @class */ (function (_super) {
     __extends(Link, _super);
     function Link(_a) {
-        var _b = _a.label, label = _b === void 0 ? '' : _b, _c = _a.className, className = _c === void 0 ? '' : _c, _d = _a.to, to = _d === void 0 ? '/' : _d, onClick = _a.onClick;
+        var _b = _a.label, label = _b === void 0 ? '' : _b, children = _a.children, _c = _a.className, className = _c === void 0 ? '' : _c, _d = _a.to, to = _d === void 0 ? '/' : _d, onClick = _a.onClick;
         return _super.call(this, {
-            element: 'a',
+            as: 'a',
             content: label,
-            attributes: { href: to, "class": className },
+            children: children,
+            attr: { href: to, "class": className },
             events: [{
                     type: 'click', listener: function (e) {
                         e.preventDefault();

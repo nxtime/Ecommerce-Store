@@ -45,10 +45,10 @@ var Container = /** @class */ (function (_super) {
             type: 'flex',
             direction: 'col',
             gap: '2'
-        } : _c, _d = _a.attributes, attributes = _d === void 0 ? {} : _d, _e = _a.className, className = _e === void 0 ? '' : _e, children = _a.children;
+        } : _c, _d = _a.attr, attr = _d === void 0 ? {} : _d, _e = _a.className, className = _e === void 0 ? '' : _e, children = _a.children;
         var _this = _super.call(this, {
-            element: as,
-            attributes: __assign(__assign({}, attributes), { "class": styles(className, variant) })
+            as: as,
+            attr: __assign(__assign({}, attr), { "class": styles(className, variant) })
         }) || this;
         if (children) {
             children.forEach(function (child) {
@@ -57,6 +57,12 @@ var Container = /** @class */ (function (_super) {
         }
         return _this;
     }
+    Container.prototype.append = function (children) {
+        var _this = this;
+        children.forEach(function (child) {
+            _this.element.appendChild(child.element);
+        });
+    };
     return Container;
 }(Element));
 export { Container };

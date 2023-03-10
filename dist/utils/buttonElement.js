@@ -19,9 +19,9 @@ var Button = /** @class */ (function (_super) {
     function Button(_a) {
         var onClick = _a.onClick, _b = _a.text, text = _b === void 0 ? '' : _b, _c = _a.className, className = _c === void 0 ? '' : _c, _d = _a.type, type = _d === void 0 ? 'button' : _d;
         return _super.call(this, {
-            element: 'button',
+            as: 'button',
             content: "<span>".concat(text, "</span>"),
-            attributes: { type: type, "class": 'btn ' + className },
+            attr: { type: type, "class": 'btn ' + className },
             events: [{ type: 'click', listener: onClick }]
         }) || this;
     }

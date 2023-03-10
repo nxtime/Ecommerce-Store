@@ -6,9 +6,9 @@ var NotFound = /** @class */ (function () {
     }
     NotFound.render = function () {
         var title = new Element({
-            element: 'h1',
+            as: 'h1',
             content: 'Not found',
-            attributes: {
+            attr: {
                 "class": 'text-4xl'
             }
         });

@@ -20,9 +20,9 @@ export class Notification extends Button {
 
   customModal() {
     const title = new Element({
-      element: 'h1',
+      as: 'h1',
       content: 'Not found',
-      attributes: {
+      attr: {
         class: 'text-4xl',
       },
     });

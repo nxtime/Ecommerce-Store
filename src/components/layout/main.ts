@@ -8,6 +8,7 @@ export class Main {
     age: 20,
     image: "https://i.pravatar.cc/150?img=1"
   };
+
   static pageComponent = new Container({});
   static header = Header
   static container = new Container({});
@@ -29,9 +30,6 @@ export class Main {
 
   static render() {
     Header.render()
-
-    // console.log("Render do main layout: ", Main.pageComponent);
-
     const layoutContainer = new Container({
       className: "layout-container",
       variant: {
@@ -47,7 +45,5 @@ export class Main {
   }
 
   static effect() {
-    // console.log("new State", this.state);
-    // console.log("Atualizated", Main.pageComponent)
   }
 }

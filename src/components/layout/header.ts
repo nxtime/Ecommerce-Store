@@ -1,6 +1,7 @@
 import { actionMenu, navlinks, notificationData } from "../../data/header.js";
 import { Container } from "../../utils/container.js";
 import { Link } from "../../utils/link.js";
+import { Cart } from "../organism/cart/index.js";
 import { Notification } from "../organism/notification.js";
 
 export interface IUser {
@@ -69,7 +70,8 @@ export class Header {
             to: link.path
           })
         }),
-        new Notification()
+        new Cart(),
+        new Notification(),
       ]
     });
 

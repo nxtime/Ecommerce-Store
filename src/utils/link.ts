@@ -3,7 +3,8 @@ import { Router } from '../routes/index.js';
 import { Element } from './element.js';
 
 export interface ILinkConstructor {
-  label: string;
+  label?: string;
+  children?: Element[];
   className?: string;
   to?: IPaths;
   onClick?: (e: Event) => void;
@@ -13,15 +14,17 @@ export class Link extends Element {
   constructor(
     {
       label = '',
+      children,
       className = '',
       to = '/',
       onClick
     }: ILinkConstructor
   ) {
     super({
-      element: 'a',
+      as: 'a',
       content: label,
-      attributes: { href: to, class: className },
+      children,
+      attr: { href: to, class: className },
       events: [{
         type: 'click', listener: (e) => {
           e.preventDefault();

@@ -1,47 +1,55 @@
-import { Button } from "../utils/buttonElement.js";
+import { FilterContainer } from "../components/organism/products/filter.js";
+import { Product } from "../components/organism/products/item.js";
+import { productsStore } from "../store/products.js";
 import { Container } from "../utils/container.js";
 import { Element } from "../utils/element.js";
 var Products = /** @class */ (function () {
     function Products() {
     }
-    Products.render = function () {
-        var _this = this;
+    Products.render = function (filter) {
         var title = new Element({
-            element: 'h1',
+            as: 'h1',
             content: this.state.title,
-            attributes: {
+            attr: {
                 id: 'text-heading',
                 "class": 'title'
             }
         });
-        var normalButton = new Button({
-            text: "Clique aqui ".concat(this.state.counter),
-            onClick: function () {
-                _this.state.counter += 1;
-                _this.effect();
-                normalButton.updateState("Clique aqui ".concat(_this.state.counter));
+        var productsMap = function () {
+            if (filter && filter !== 'all') {
+                return productsStore.products.filter(function (product) {
+                    return product.categories.includes(filter);
+                });
             }
+            return productsStore.products;
+        };
+        var productsContainer = new Container({
+            variant: {
+                type: "flex",
+                gap: "2"
+            },
+            className: "products-container",
+            children: productsMap().map(function (product) {
+                var productItem = new Product(product);
+                return productItem.container;
+            })
         });
-        var superButton = new Button({
-            text: "Change Products Title",
-            onClick: function () {
-                if (title.state === "Changed Products Title") {
-                    title.updateState("Change Products Title");
-                    _this.state.title = "Change Products Title";
-                    return;
-                }
-                title.updateState("Changed Products Title");
-                _this.state.title = "Changed Products Title";
-            }
-        });
+        FilterContainer.render();
         var container = new Container({
-            children: [title, new Container({
+            children: [
+                title,
+                new Container({
                     variant: {
-                        type: "flex",
-                        gap: "2"
+                        type: 'flex',
+                        gap: '2',
+                        align: 'start'
                     },
-                    children: [normalButton, superButton]
-                })]
+                    children: [
+                        FilterContainer.container,
+                        productsContainer,
+                    ]
+                })
+            ]
         });
         return container;
     };
@@ -49,7 +57,7 @@ var Products = /** @class */ (function () {
         console.log("new State", this.state);
     };
     Products.state = {
-        counter: 0,
+        counter: 10,
         title: "Change Products Title"
     };
     return Products;

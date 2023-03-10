@@ -14,7 +14,6 @@ var Main = /** @class */ (function () {
     };
     Main.render = function () {
         Header.render();
-        // console.log("Render do main layout: ", Main.pageComponent);
         var layoutContainer = new Container({
             className: "layout-container",
             variant: {
@@ -27,8 +26,6 @@ var Main = /** @class */ (function () {
         return layoutContainer.element;
     };
     Main.effect = function () {
-        // console.log("new State", this.state);
-        // console.log("Atualizated", Main.pageComponent)
     };
     Main.state = {
         name: "John",

@@ -1,7 +1,7 @@
 import { Element } from './element.js';
 
 export interface IContainerConstructor {
-  as?: 'div' | 'section' | 'header' | 'footer' | 'main' | 'article' | 'aside' | 'ul',
+  as?: 'div' | 'section' | 'header' | 'footer' | 'main' | 'article' | 'aside' | 'ul' | 'li',
   variant?: {
     type?: 'flex' | 'grid';
     direction?: 'row' | 'col';
@@ -9,7 +9,7 @@ export interface IContainerConstructor {
     align?: 'center' | 'start' | 'end';
     gap?: string;
   };
-  attributes?: any;
+  attr?: any;
   className?: string;
   children?: Element[];
 }
@@ -37,15 +37,15 @@ export class Container extends Element {
         direction: 'col',
         gap: '2'
       },
-      attributes = {},
+      attr = {},
       className = '',
       children
     }: IContainerConstructor
   ) {
     super({
-      element: as,
-      attributes: {
-        ...attributes,
+      as,
+      attr: {
+        ...attr,
         class: styles(className, variant)
       }
     });
@@ -55,5 +55,11 @@ export class Container extends Element {
         this.element.appendChild(child.element);
       });
     }
+  }
+
+  append(children: Element[]) {
+    children.forEach((child) => {
+      this.element.appendChild(child.element);
+    });
   }
 }

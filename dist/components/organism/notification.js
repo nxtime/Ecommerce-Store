@@ -33,9 +33,9 @@ var Notification = /** @class */ (function (_super) {
     };
     Notification.prototype.customModal = function () {
         var title = new Element({
-            element: 'h1',
+            as: 'h1',
             content: 'Not found',
-            attributes: {
+            attr: {
                 "class": 'text-4xl'
             }
         });
